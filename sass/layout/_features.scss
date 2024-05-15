@@ -1,0 +1,45 @@
+.features {
+  margin-bottom: 8rem;
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+  }
+
+  &__picture {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    max-width: 80%;
+    font-size: 4.5rem;
+    font-weight: 400;
+    font-family: $font-primary;
+    line-height: 4.5rem;
+    padding: 1.6rem 0 1rem;
+    height: min-content;
+    border-left: 1rem solid white;
+
+    & > span {
+      padding: 1.6rem 0 1rem;
+      background-color: white;
+      border-right: 2rem solid white;
+      & > span {
+        position: relative;
+      }
+    }
+  }
+}

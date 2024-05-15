@@ -1,0 +1,48 @@
+@import "layout/grid";
+@import "layout/header";
+@import "layout/description";
+@import "layout/event";
+@import "layout/location";
+@import "layout/vendor";
+@import "layout/footer";
+@import "layout/main";
+@import "layout/nav";
+@import "layout/food";
+@import "layout/retail";
+@import "layout/community";
+@import "layout/dishes";
+@import "layout/announcement";
+@import "layout/stores";
+@import "layout/market-events";
+@import "layout/features";
+
+@import "utilities/variable";
+@import "utilities/typography";
+@import "utilities/animation";
+@import "utilities/mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 16px
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6rem;
+
+  height: 100vh;
+  min-height: 100vh;
+  //   width: 100%;
+  overflow: hidden;
+}
