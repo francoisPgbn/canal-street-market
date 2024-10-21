@@ -1,0 +1,18 @@
+.retail {
+  &[aria-expanded="false"] {
+    .retail__content {
+      display: none;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .btn-nav {
+      display: none;
+    }
+    .retail__content {
+      padding: 13rem 6rem;
+      opacity: 0;
+      animation: fadeInMain 1s linear 500ms forwards;
+    }
+  }
+}

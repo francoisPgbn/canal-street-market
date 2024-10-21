@@ -1,0 +1,67 @@
+@import "./../utilities/mixin";
+
+.main .footer {
+  padding: 6rem;
+}
+
+.footer {
+  .link {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 18rem;
+      gap: 3rem;
+      //   align-items: stretch;
+    }
+
+    &__item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      @include border-dot;
+
+      &:last-child {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        padding: 2rem 5rem;
+        justify-content: space-between;
+      }
+      &:hover {
+        animation-play-state: running;
+        background-position: 100% 0, -100% 100%, 0 -100%, 100% 100%;
+      }
+    }
+
+    &__logo {
+      height: 3rem;
+      width: 3rem;
+      fill: $color-black;
+    }
+
+    &__item:last-child > .link__text {
+      font-size: 2.2rem;
+      flex: 0 1 30%;
+      text-align: left;
+    }
+
+    &__newsletter {
+      flex-basis: 65%;
+    }
+
+    &__input {
+      height: 6rem;
+      width: 100%;
+      padding: 2rem 3rem;
+      border: 2px solid $color-black;
+      background-color: transparent;
+
+      &::placeholder {
+        color: $color-black;
+        font-family: $font-display;
+      }
+    }
+  }
+}
